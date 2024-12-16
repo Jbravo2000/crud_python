@@ -1,0 +1,140 @@
+/* Tabla */
+.table th {
+    background-color: #343a40;
+    color: rgb(255, 254, 254);
+}
+
+/* Barra lateral */
+#layout-menu {
+    height: 93vh;
+    background-color: #333;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra sutil en el lateral */
+    border-right: 1px solid #ddd; /* Borde lateral derecho */
+}
+.menu-vertical .list-group-item {
+    font-size: 1rem;
+    background-color: hwb(60 67% 3%); 
+    color: rgb(14, 13, 13);
+    border: none;
+    transition: background-color 0.3s;
+}
+.menu-vertical .list-group-item:hover {
+    background-color: #333; /* Gris oscuro al pasar el cursor */
+    color: #00ff00; /* Verde claro */
+}
+
+.list-group {
+    border-radius: 0; /* Elimina bordes redondeados */
+}
+
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #68b1fa;
+    color: #333;
+}
+
+/* Encabezado */
+h1 {
+    color: #007bff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Formulario */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Enlaces */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tabla */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #343a40;
+    padding: 8px;
+    text-align: center;
+}
+
+
+
+td {
+    background-color: #f2f2f2;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-danger {
+    background-color: #f73d4f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+}
+

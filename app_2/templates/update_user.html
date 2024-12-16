@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Usuario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <form action="" method="POST">
+        <h1>Actualizar Usuario</h1>
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" value="{{ user[1] }}" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="{{ user[2] }}" required><br><br>
+
+        <label for="phone">Telefono:</label>
+        <input type="text" name="telefono" value="{{ user[3] }}" required><br><br>
+
+        <button href="/update/<int:id>" type="submit">Guardar Cambios</button>
+        <a href="{{ url_for('usuario') }}">Cancelar</a>
+    </form>
+</body>
+</html>

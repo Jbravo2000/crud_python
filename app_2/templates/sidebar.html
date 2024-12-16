@@ -1,0 +1,15 @@
+<div class="list-group">
+    <aside id="layout-menu" class="layout-menu menu-vertical bg-light p-3">
+        <div class="app-brand demo text-center mb-4">
+           <span class="app-brand-logo demo">
+             <a href="/users"><img src="{{ url_for('static', filename ='assets/img/logo.png') }}"alt="Logo" class="img-fluid" style="max-width: 150px;"></a>
+           </span>
+    
+           <a href="/add_user" class="list-group-item list-group-item-action">Ingresar</a>
+           <a href="/update_select" class="list-group-item list-group-item-action">Actualizar</a>
+           <a href="/delete_select" class="list-group-item list-group-item-action">Eliminar</a>
+           <a href="/reports" class="list-group-item list-group-item-action" >Reportes</a>
+           <a href="/"><img src="{{ url_for('static', filename ='assets/img/salio.png') }}" alt="Salir" class="img-fluid mt-4" style="max-width: 150px;"></a>
+        </div>
+    </aside>
+</div>

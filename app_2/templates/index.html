@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center alert alert-danger">Python Flask CRUD Application</h1>
+        <div class="row">
+            {% include 'sidebar.html' %}
+            <div class="col-md-9">
+                <h2>Usuarios</h2>
+                <a href="/add_user" class="btn btn-outline-success">Agregar Usuario</a>
+
+                <table class="table mt-3">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Telefono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in usuario %}
+                        <tr>
+                            <td>{{ user[0] }}</td>
+                            <td>{{ user[1] }}</td>
+                            <td>{{ user[2] }}</td>
+                            <td>{{ user[3] }}</td>
+                            <td>
+                                <a href="{{ url_for('update_user', id=user[0]) }}" class="btn btn-warning mb-2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPBJREFUSEvVldkRwjAMRDedQCfQCVQCVAKdQCmhEvAytkfjRLHkOB/kL4ffk9ZHBmx8DRvz0VNwB/AOBV9l0aXgAIAf7iqdHQG8xDccc4r3NykpBc8wkJKlq4SzGI6TRWVJKfhEsjU6QscIl5JzePYga42AsbBbdiQlrP4HXyOQmROeJJNoWzqQ8ASkZD83cV7BHJzcnHkp8QiscM5LXsJWgQfO1ZS5FoEVznQmy9wiSINkvFrmXQTqhPboYAneHJHnRG+K6L8EluO61hE3Gc+m2cOOu/Bi+CdoEp5JXAjqTq5V535v/bG4wVpEzSBt4BeV+kAZ5MHlwgAAAABJRU5ErkJggg=="/> Editar</a>
+                                <a href="{{ url_for('delete_user', id=user[0]) }}" class="btn btn-danger mb-2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAI1JREFUSEtjZKAxYKSx+QzEWODAwMCwH4dDGoHiDfgcScgCfIaDzH3AwMCQyMDAcACXJegW/KdSkMHNpbsFVPIAwhhccUBuUGGYNzIsgPkSPdiwiZMVRKMWYE36yOE9GkQjIIhIKQCJzmigGgxU2ZACQJWOI7oGXIUdyPB6EizBWbMRqjJJ8QFWtTS3AAAyqysZPeY+2wAAAABJRU5ErkJggg=="/> Eliminar</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
